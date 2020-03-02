@@ -1,16 +1,21 @@
 # flutter_mvvm_architecture
 
-A new Flutter project.
+A project to serve as a base MVVM architecture for simple Flutter apps that requires some persistency.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+There are 4 layers in this architecture:
+- Data (**data/**)
+- Model (**models/**)
+- View Model (**ui/**)
+- View (**ui/**)
 
-A few resources to get you started if this is your first Flutter project:
+The naming pattern of the files are:
+- Model: **models/entity.dart**
+- View Model: **ui/feature/feature_viewmodel.dart**
+- View: **ui/feature/feature_screen.dart**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+There are some extras which aren't exactly in any of the layers above. They don't have any naming convention defined:
+- Components (**/components**): Reusable Widgets through the application
+- Utils (**/utils**): Classes that helps any of the layers to do some specific job
+- Services (**/services**): Services that access external APIs. Naming convention is **/services/example_service.dart**
